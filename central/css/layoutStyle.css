@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../../resources/font/Montserrat-Regular.ttf);
+}
+
+@property --angle{
+
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    
+    from{
+
+        --angle: 0deg;
+    }
+
+    to{
+
+        --angle: 360deg;
+    }
+}
+
+body{
+
+    background-color: rgb(224, 241, 255);
+}
+
+.container{
+
+    background-color: #232323;
+    font-family: Montserrat;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.container::after, .container::before{
+
+    content: '';
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    background-image: conic-gradient(from var(--angle), hsl(210, 54%, 43%), hsl(0, 100%, 71%), hsl(224, 62%, 37%), hsl(210, 54%, 43%));
+    top: 39.5%;
+    left: 49.95%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 30px;
+    animation: 3s spin linear infinite;
+}
+
+.container::before{
+
+    filter: blur(1.5rem);
+}
+
+.container:hover{
+
+
+}
+
+.container h1{
+
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+}
+
+.container p{
+
+    color: white;
+    width: 70%;
+    height: 40%;
+    font-size: 25px;
+    text-align: justify;
+}
+
+a{
+
+    text-decoration: none;
+}
+
+#haBtn{
+
+    font-family: Montserrat;
+    font-size: 1.5rem;
+    display: flex;      
+    margin: -40px auto;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+#haBtn:hover{
+
+    color: white;
+    border: none;
+    background-color: hsl(0, 0%, 40%);
+    box-shadow: 2px 2px 7px hsl(0, 0%, 0%, 0.7);
+}
