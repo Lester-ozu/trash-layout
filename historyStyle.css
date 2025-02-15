@@ -14,6 +14,7 @@ body{
     margin: 0;
     font-family: Montserrat;
     padding: 2em;
+    background-image: url('0.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
