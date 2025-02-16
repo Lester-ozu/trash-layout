@@ -16,3 +16,5 @@ const updateBackground = () => {
 
 window.addEventListener("load", updateBackground);
 window.addEventListener("scroll", updateBackground); 
+
+console.log("hello");
