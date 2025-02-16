@@ -15,4 +15,4 @@ const updateBackground = () => {
 }
 
 window.addEventListener("load", updateBackground);
-window.addEventListener("scroll", updateBackground);
+window.addEventListener("scroll", updateBackground); 
