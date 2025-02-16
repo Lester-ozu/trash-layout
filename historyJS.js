@@ -11,7 +11,13 @@ const updateBackground = () => {
         imageCount
     );
 
-    document.body.style.backgroundImage = `url('${scrollIndex}.jpg')`;
+    document.body.style.transition = "opacity 0.5s ease-out";
+    document.body.style.opacity = "0";
+
+    setTimeout(() => {
+        document.body.style.backgroundImage = `url('${scrollIndex}.jpg')`;
+        document.body.style.opacity = "1";
+    }, 250);
 }
 
 window.addEventListener("load", updateBackground);
