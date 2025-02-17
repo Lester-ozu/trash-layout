@@ -63,11 +63,6 @@ body{
     filter: blur(1.5rem);
 }
 
-.container:hover{
-
-
-}
-
 .container h1{
 
     font-size: 3rem;
@@ -108,4 +103,30 @@ a{
     border: none;
     background-color: hsl(0, 0%, 40%);
     box-shadow: 2px 2px 7px hsl(0, 0%, 0%, 0.7);
+}
+
+@media screen and (max-width: 1000px) {
+
+    .container h1{
+
+        font-size: 2.5rem;
+    }
+
+    .container p{
+
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container h1{
+
+        font-size: 2rem;
+    }
+
+    .container p{
+
+        font-size: 16px;
+    }
 }
